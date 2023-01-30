@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 from random import choice
-
+import os
 
 bot = commands.Bot(command_prefix='/', intents=discord.Intents.all())
 
@@ -35,4 +35,4 @@ async def on_member_remove(member):
 	await channel.send(embed=embed)
 
 
-bot.run('MTA2NzU3NDc0NTkyNDY1MzE0Ng.Ge5YSf.q9_sXYRzKPHLLZVJxehBsNNkRZ2Oh42JGuFVl8')
+bot.run(os.getenv("BOT_TOKEN")
